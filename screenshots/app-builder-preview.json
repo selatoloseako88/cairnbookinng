@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Cairn — Book a hotel or lodge",
+      "hasCanvas": false,
+      "bodyTextLen": 2464,
+      "bodyTextHash": "455fabf0a623da1d73191f88cb9491c837ea8c3293bd257844904089ff4bf7c7",
+      "bodyTextPrefix": "Cairn Places Stays Trips Book Africa, Asia, Europe, the Americas",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Cairn — Book a hotel or lodge",
+      "hasCanvas": false,
+      "bodyTextLen": 2440,
+      "bodyTextHash": "0bad43aef829a9001069e9d356778dc229833ae203a7627c494eee5e1fd12d5c",
+      "bodyTextPrefix": "Cairn Africa, Asia, Europe, the Americas Book the room. Skip the",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [
+    "BRAND NOTE: no custom public/og.jpg — the platform will serve the og.grok.me placeholder. Custom cards are the default for games of every kind (DOM board/word games included), whimsical apps, creative tools, and brand-forward pages — only plain utilities (converters, CRUD trackers, admin dashboards) keep the placeholder. If this app is not a plain utility, finish the brand-asset pass per /workspace/.grok/skills/og/SKILL.md."
+  ],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

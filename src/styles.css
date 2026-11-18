@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+
+  --color-paper: #efeae2;
+  --color-foam: #f7f4ef;
+  --color-ink: #171615;
+  --color-muted: #5f5a54;
+  --color-faint: #8a837a;
+  --color-line: #ddd6cb;
+  --color-danger: #8d3b3b;
+
+  --shadow-card:
+    0 0 0 1px color-mix(in oklab, var(--color-ink) 8%, transparent),
+    0 10px 28px -18px color-mix(in oklab, var(--color-ink) 45%, transparent);
+  --shadow-pop:
+    0 0 0 1px color-mix(in oklab, var(--color-ink) 10%, transparent),
+    0 16px 40px -20px color-mix(in oklab, var(--color-ink) 50%, transparent);
+
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .photo-frame {
+    outline: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+    outline-offset: -1px;
+  }
+
+  .card-lift {
+    transition-property: transform, box-shadow;
+    transition-duration: 150ms;
+    transition-timing-function: var(--ease-smooth);
+  }
+
+  .card-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-lift,
+  .card-lift:hover,
+  .hero-photo {
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}
+
+.ratio-place {
+  aspect-ratio: 3 / 4;
+}
+
+.ratio-stay {
+  aspect-ratio: 3 / 2;
+}
+
+.ratio-wide {
+  aspect-ratio: 16 / 10;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0.72;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-photo {
+  animation: hero-in 400ms var(--ease-smooth) both;
+}
